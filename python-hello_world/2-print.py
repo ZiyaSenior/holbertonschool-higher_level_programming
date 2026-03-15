@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-"""Prints a specific text using the print function."""
+"""Prints the exact text with a starting quotation mark."""
 
-print("Programming is like building a multilingual puzzle")
+print('"Programming is like building a multilingual puzzle')
