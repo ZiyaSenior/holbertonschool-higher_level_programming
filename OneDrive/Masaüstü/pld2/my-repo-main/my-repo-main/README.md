@@ -1,1 +1,0 @@
-# pld-management-app
