@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""A class Rectangle that defines a rectangle with width, height,
-area, perimeter, print_symbol, number_of_instances and proper string representation.
+"""Rectangle class with width, height, area, perimeter, print_symbol,
+number_of_instances, and proper string representation.
 """
 
 class Rectangle:
