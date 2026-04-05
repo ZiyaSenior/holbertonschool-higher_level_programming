@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""Rectangle class with width, height, area, perimeter, print_symbol,
-number_of_instances, and proper string representation.
-"""
-
 class Rectangle:
+    """Rectangle class with width, height, area, perimeter, print_symbol,
+    number_of_instances, and proper string representation."""
+    
     # Public class attributes
     number_of_instances = 0
     print_symbol = "#"
