@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists states matching user input from hbtn_0e_0_usa
+Filters states safely by name
 """
 
 import MySQLdb
@@ -24,9 +24,10 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     query = (
-        "SELECT * FROM states WHERE name = '{}' "
+        "SELECT * FROM states "
+        "WHERE BINARY name = '{}' "
         "ORDER BY id ASC"
-    ).format(state_name)
+    ).format(state_name.replace("'", "\\'"))
 
     cursor.execute(query)
 
