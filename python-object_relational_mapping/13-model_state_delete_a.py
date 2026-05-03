@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Deletes all State objects that contain the letter 'a'
+Deletes all State objects with a name containing the letter 'a'
 """
 
 import sys
@@ -25,16 +25,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Find all states containing 'a'
-    states_to_delete = session.query(State)\
-        .filter(State.name.like("%a%"))\
-        .all()
+    # Query and delete states containing 'a'
+    states = session.query(State).filter(State.name.like("%a%")).all()
 
-    # Delete them
-    for state in states_to_delete:
+    for state in states:
         session.delete(state)
 
-    # Commit changes
     session.commit()
-
     session.close()
